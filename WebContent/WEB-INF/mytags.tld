@@ -13,8 +13,6 @@
 	<tag>
 		<name>addToHashMap</name>
 		<tag-class>com.bitwise.onlineShopping.MyTagHandler</tag-class>
-
-		
 		<attribute>
 			<name>item</name>
 			<required>true</required>

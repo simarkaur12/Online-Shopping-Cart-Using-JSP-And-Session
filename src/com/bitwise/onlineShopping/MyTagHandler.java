@@ -15,9 +15,9 @@ import org.apache.catalina.connector.Request;
 public class MyTagHandler extends TagSupport{
 
 	String uid;
-	String item;
+	Item item;
 
-	public void setItem(String item) {
+	public void setItem(Item item) {
 		this.item = item;
 	}
 
@@ -26,11 +26,14 @@ public class MyTagHandler extends TagSupport{
 		HttpServletRequest request = (HttpServletRequest)pageContext.getRequest();
 
 		uid = (String) request.getSession().getAttribute("name");
-		HashMap<String, String> map = new HashMap<>();
+		HashMap<String, Item> map = new HashMap<>();
 		map.put(uid, item);
 
+		 for(Map.Entry m: map.entrySet() ){  
+	           System.out.println(m.getKey()+","+m.getValue());  
+	        }
+		
 		return 1;
-
 
 	}
 }

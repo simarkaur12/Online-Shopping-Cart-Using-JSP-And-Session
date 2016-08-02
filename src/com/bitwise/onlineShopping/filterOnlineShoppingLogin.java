@@ -48,7 +48,7 @@ public class filterOnlineShoppingLogin implements Filter {
 		System.out.println(uid+","+password);
 		if(uid=="" && password==""){
 			out.print("<font color='red'>Please Fill the values first</font>");
-			request.getRequestDispatcher("/Login.jsp").include(request, response);
+			request.getRequestDispatcher("/index.jsp").include(request, response);
 		}
 		else {
 			checkInDatabase(request, response, chain, map, out, ssn, uid, password);
@@ -63,7 +63,7 @@ public class filterOnlineShoppingLogin implements Filter {
 		}
 		else {
 			out.print("<font color='red'>Invalid UserId And password</font>");
-			request.getRequestDispatcher("/Login.jsp").include(request, response);
+			request.getRequestDispatcher("/index.jsp").include(request, response);
 		}
 	}
 
