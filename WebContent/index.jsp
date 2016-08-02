@@ -6,15 +6,20 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
+<center>
 <h1>User Login</h1>
+  <fieldset>
+  <legend><font size="5" color="green">Login</font></legend>
     <form name="frm" action="userShopping.jsp" method="post">
-        Name: 
-        <input type="text" name="name" placeholder="UserName"/>
+        <font size="5">Name:</font> 
+        <input type="text" name="name" placeholder="UserName" required />
         <br>
-        Password: 
-        <input type="password" name="password" placeholder="password"/>
+        <font size="5">Password:</font> 
+        <input type="password" name="password" placeholder="password" required/>
         <br>
         <input type="submit" name="btn" value="LOGIN" />
     </form>
+    </fieldset>
+</center>
 </body>
 </html>
